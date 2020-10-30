@@ -4,7 +4,7 @@ import Form from '../Form/Form';
 import Message from '../Message/Message';
 import './App.scss';
 
-class App extends Component {
+export default class App extends Component {
 	state = {
 		messages: [],
 		idList: [],
@@ -25,16 +25,18 @@ class App extends Component {
 		const { messages } = this.state;
 		return (
 			<div>
-				<h1 className="title">Chat App</h1>
-				<Form addMessage={this.addMessage} />
-				<ul>
-					{messages.map(message => {
-						return <Message key={message.id} message={message} />;
-					})}
-				</ul>
+				<header>
+					<h1 className="title">Chat App</h1>
+				</header>
+				<main>
+					<Form addMessage={this.addMessage} />
+					<ul>
+						{messages.map(message => {
+							return <Message key={message.id} message={message} />;
+						})}
+					</ul>
+				</main>
 			</div>
 		);
 	}
 }
-
-export default App;
