@@ -9,6 +9,10 @@ app.get('/', (req, res) => {
 	});
 });
 
+app.post('/messages', (req, res) => {
+	console.log(req.body);
+});
+
 app.listen(process.env.PORT, () => {
 	const { PORT } = process.env;
 	console.log(
