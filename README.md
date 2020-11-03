@@ -12,6 +12,8 @@
   - [ ] Host build on Heroku
   - [ ] Learn something new :exploding_head:
 
+<!-- inspired by https://www.youtube.com/watch?v=JnEH9tYLxLk -->
+
 <!-- ## Snapshot -->
 
 <!--

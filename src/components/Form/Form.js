@@ -5,16 +5,16 @@ export default class Form extends Component {
 		content: '',
 	};
 
-	onSubmit = event => {
-		event.preventDefault();
+	onSubmit = e => {
+		e.preventDefault();
 		this.props.addMessage(
 			this.state.content ? this.state.content : 'Empty Message'
 		);
 		this.setState({ content: '' });
 	};
 
-	onChange = event => {
-		this.setState({ [event.target.name]: event.target.value });
+	onChange = e => {
+		this.setState({ [e.target.name]: e.target.value });
 	};
 
 	render() {
